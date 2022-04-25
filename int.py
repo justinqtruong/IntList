@@ -20,7 +20,7 @@ def nameCheck():
 
 
     lobby.close()
-    intList.seek(0)
+    intList.close()
 
 
 
