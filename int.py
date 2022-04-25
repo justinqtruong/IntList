@@ -1,27 +1,11 @@
 
-def main():
+
+def nameCheck(): 
+
     lobby = open("lobby.txt", "r") #Lobby Text file copied from league lobby
-    LobbyNames = lobby.readlines() #read line by line
-    extra = " joined the lobby" #part of string we want to cut off
-    index = 0 #compare extra to lobby league string
-    endMarker = 0 #index of where we want to cut string
-    
+    LobbyNames = lobby.readlines() #read line by line    
 
-    for name in LobbyNames: #name is whole line
-
-        for i in range(len(name) - 1):
-            if name[i] == extra[index]:
-                index += 1
-            else:
-                index= 0
-                endMarker = 0
-            if index == 1:
-                endMarker = i
-
-        index = 0
-        name = name[0:endMarker]         
-
-        
+    for name in LobbyNames: #name is whole line      
         intList = open("Int List.txt", "r") #int List
         runItDown = intList.readlines()
 
@@ -40,8 +24,6 @@ def main():
 
 
 
-if __name__=="__main__":
-    main()
 
 
 
